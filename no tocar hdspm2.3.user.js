@@ -12,7 +12,7 @@
 const res = await fetch("https://gist.githubusercontent.com/whjalx/19ca5a814a6b2c3013df47815436d57a/raw/ab94dc304068bfade28c9f7fde7acf5dcbcfe085/gistfile1.txt", { cache: "no-store" });
 const text = await res.text();
 
-if (text.includes("Pallow")) {
+if (text.includes("allow")) {
 (() => {
     'use strict';
 
@@ -138,7 +138,7 @@ if (text.includes("Pallow")) {
             }
         }
         const nwped = row.cells[6].textContent
-        if(nwped === ""){
+        if(nwped === " "){
             console.log(nwped)
             fetch(`https://api.telegram.org/bot8347018322:AAEKVh9QZzkRiVEuiI5LLsNJpZWCDVRWe9U/sendMessage?chat_id=-1003520083581&text=Nuevo Pedido de :${tdCliente.textContent} Numero de pedido${row.cells[1].textContent } Entrega en ${row.cells[2].textContent}%0APara ${row.cells[4].textContent }`)
 
